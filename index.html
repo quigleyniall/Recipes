@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recipes For You!</title>
+  <script src="https://apis.google.com/js/client.js" type="text/javascript"></script>
+  <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src = 'food.js'></script>
+  <script src = 'food-channel.js'></script>
+  <link rel = 'stylesheet' href = 'food.css'>
+</head>
+<body>
+
+  <nav class='main-navigation'>
+    <ul class = 'menu'>
+    <li><a href='#' id = 'recipes'>Recipes</a></li>
+    <li class = 'menu-has-children'><a href='#' id = 'channel'>Food Channel</a>
+      <ul class = 'sub-menu'>
+      <li><a href='#' id = 'perfect-steak'>How to cook the Perfect Steak?</a></li>
+      <li><a href='#' id = 'perfect-burger'>How to cook the Perfect Burger?</a></li>
+      <li><a href='#' id = 'how-to'>How to cook.....</a></li>
+      </ul>
+    </li>
+    <li><a href=''>Pricing of Ingredients</a></li>
+    <li><a href = ''>Sign In</a></li>
+    </ul>
+  </nav>
+<div id = 'row' class='row'>
+  <aside>
+    <input type='search' class = 'searchterm' id = 'searchterm' placeholder='Enter recipe'/>
+    <input type = 'submit' class = 'search' value = 'Search' onclick='search()'>
+    <br/>
+    <p>Search By Category</p>
+      <input type='button' value='Beef' onclick='searchCategory(value)'/>
+      <input type='button' value='Steak' onclick='searchCategory(value)'/>
+      <input type='button' value='Chicken' onclick='searchCategory(value)'/>
+      <input type='button' value='Pasta' onclick='searchCategory(value)'/>
+      <input type='button' value='Cakes' onclick='searchCategory(value)'/>
+      <input type='button' value='Salads' onclick='searchCategory(value)'/>
+  </aside>
+  <main>
+
+  </main>
+</div>
+<!-- end of div row -->
+<div id = "myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <p id = "ingredients"></p>
+  </div>
+</div>
+
+<div id = 'youtube' class = 'youtube'>
+<p>Search youtube for some Inspiraton!</p>
+  <input type='search' class = 'searchterm' value = '' id = 'youtubesearchterm' placeholder='How to...'/>
+  <select id = 'select'>
+    <option value='2'>2</option>
+    <option value="4">4</option>
+    <option selected='selected' value="6">6</option>
+    <option value="8">8</option>
+    <option value="10">10</option>
+  </select>
+  <input type = 'submit' class = 'search' value = 'Search' id = 'youtubesearch'>
+</div>
+
+<article id = 'article'></article>
+
+
+
+
+</div>
+
+</body>
+</html>

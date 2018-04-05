@@ -1,0 +1,219 @@
+*{
+  box-sizing: border-box;
+  font-family:"Dosis", sans-serif;
+}
+
+nav{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 2em;
+
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+nav .menu{
+  display: flex;
+  flex-direction: column;
+}
+nav .menu li {
+  display: block;
+  list-style-type: none;
+}
+nav .menu li a {
+  display: flex;
+  color: #777;
+  text-decoration: none;
+  padding: 1rem 50px;
+}
+nav .menu li a:hover{
+   background:#777;
+   color:#fff;
+ }
+nav .sub-menu{
+  display: none;
+  /* position: absolute; */
+}
+nav ul li:hover ul {
+  display: block;
+  z-index: 1;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 800px)  {
+  nav .menu{
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  nav .sub-menu{
+    position: absolute;
+  }
+  nav ul li:hover ul {
+    padding-left: 0px;
+  }
+  nav ul li:hover ul a {
+    color:#fff;
+    background-color: #777;
+  }
+  nav ul li:hover ul a:hover {
+      background: #ddd;
+      color: black;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+aside {
+  flex: 3;
+  flex-direction: column;
+  margin-left: 30px;
+}
+aside .searchterm {
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: default;
+}
+aside .search, aside input {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+aside .search:hover {
+  box-shadow: 1px 1px 0px #888888
+}
+
+main {
+  flex: 7;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+section {
+  width: 45%;
+  margin: 5px;
+  position: relative;
+  height: 440px;
+}
+section img{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  display: block;
+  bottom: 0px;
+}
+section a {
+  text-decoration: none;
+  padding: 10px 30px;
+  text-align: center;
+  background-color: #ddd;
+  color: #777;
+  margin: 5px;
+}
+section button {
+  background-color: #ddd;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+@media screen and (max-width: 850px){
+  aside{
+    display:block;
+    flex: none;
+    flex-direction: row;
+  }
+  main{
+    display: block;
+    flex: 1;
+  }
+  section{
+    width: 100%;
+  }
+
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content, .youtube-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* youtube search bar */
+.youtube {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.youtube .searchterm {
+  width: 60%;
+  height: 50px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.youtube .search {
+  width: 10%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.youtube .search:hover {
+  background-color: #777;
+  box-shadow: 2px 2px 0px #888888;
+  color: white;
+}
+.youtube select {
+  height: 50px;
+  background-color: #888888;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+}
+.youtube p {
+display: block;
+font-size: 20px;
+}
+article {
+  text-align: center;
+}
+iframe {
+margin: 20px;
+}
