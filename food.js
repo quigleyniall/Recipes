@@ -4,9 +4,7 @@ let request = new XMLHttpRequest ()
 request.open('GET',url)
 request.responseType = 'json'
 request.send()
-var resp = request.response;
-   console.log(resp)
-request.onload = function(){   
+request.onload = function(){
   searchResponse(request.response)
 }
 
