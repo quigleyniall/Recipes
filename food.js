@@ -4,9 +4,9 @@ let request = new XMLHttpRequest ()
 request.open('GET',url)
 request.responseType = 'json'
 request.send()
-request.onload = function(){
-   var resp = request.responseText;
+var resp = request.response;
    console.log(resp)
+request.onload = function(){   
   searchResponse(request.response)
 }
 
@@ -14,7 +14,7 @@ request.onload = function(){
 let i;
 
 let num = Math.floor(Math.random()*20)
-let searchUrl = "https://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&page="+ num
+let searchUrl = "http://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&page="+ num
 
 
 let Response = request(searchUrl)
@@ -61,13 +61,13 @@ function searchResponse(data){
 function search(){
   let num = Math.floor(Math.random()*1)
   let searchterm = document.getElementById('searchterm').value
-  searchUrl = "https://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&q=" + searchterm + "&page=" + num
+  searchUrl = "http://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&q=" + searchterm + "&page=" + num
   request(searchUrl)
 }
 
 function searchCategory(value){
   let num = Math.floor(Math.random()*1)
-  searchUrl = "https://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&q=" + value + "&page=" +num
+  searchUrl = "http://food2fork.com/api/search?key=b4513d9f1016bc33d7422d04ef8751b8&q=" + value + "&page=" +num
   request(searchUrl)
 }
 
